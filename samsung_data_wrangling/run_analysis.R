@@ -67,5 +67,5 @@ summarised_data <- combined %>% group_by(Subject,ActivityName) %>% summarise_eac
 tidy_data <- gather(summarised_data, Features, Value, tBodyAcc.mean...X:angle.Z.gravityMean., -ActivityLabel)
 
 # Export tidy data 
-write.table(tidy_data, file="samsung_tidy_data.txt")
+write.table(tidy_data, row.names = FALSE, file="samsung_tidy_data.txt")
 
